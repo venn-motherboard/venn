@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Alexa Faye G. Abad | Programmer Profile</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="locked">
+
+<!-- INTRO -->
+<div id="intro">
+  <h1 class="display">Alexa Faye Abad</h1>
+  <p>Programmer Profile</p>
+  <button id="startBtn" type="button">PRESS START</button>
+  <p style="font-size:.8rem">Sound is off by default.</p>
+</div>
+
+<!-- LOADING SCENE -->
+<div id="loader" aria-live="polite" aria-label="Loading developer profile">
+  <div class="glow-bg"></div>
+  <div class="tunnel" id="tunnel"></div>
+  <div class="floor"></div><div class="lane"></div>
+  <div class="ring r1"></div><div class="ring r2"></div><div class="ring r3"></div>
+  <div class="smoke"></div>
+  <canvas id="sparks"></canvas>
+
+  <div class="hud">
+    <div class="ign"><span id="ign1"></span><small id="ign2">INITIALIZING DEVELOPER PROFILE</small></div>
+  </div>
+
+  <div id="car">
+    <svg viewBox="0 0 640 200" aria-hidden="true">
+      <defs>
+        <linearGradient id="body" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2a2a2e"/><stop offset=".45" stop-color="#0c0c0e"/><stop offset="1" stop-color="#000"/></linearGradient>
+        <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3a0b12"/><stop offset="1" stop-color="#050506"/></linearGradient>
+        <radialGradient id="lampg"><stop offset="0" stop-color="#fff"/><stop offset=".35" stop-color="#ff4040"/><stop offset="1" stop-color="#ff0000" stop-opacity="0"/></radialGradient>
+        <linearGradient id="beamg" x1="0" x2="1"><stop offset="0" stop-color="#ff2a2a" stop-opacity=".7"/><stop offset="1" stop-color="#ff2a2a" stop-opacity="0"/></linearGradient>
+      </defs>
+      <ellipse cx="320" cy="178" rx="290" ry="12" fill="#e10600" opacity=".35"/>
+      <!-- body -->
+      <path d="M22 140 C20 120 40 108 78 104 L168 94 C196 66 236 50 292 48 C350 46 396 58 430 90 L560 104 C606 110 626 124 622 142 L618 156 L26 156 Z" fill="url(#body)" stroke="#3b0d14" stroke-width="2"/>
+      <!-- cabin glass -->
+      <path d="M190 94 C214 70 246 60 292 60 C340 58 376 68 408 92 Z" fill="url(#glass)" stroke="#5a1019" stroke-width="1.5"/>
+      <!-- body line + red accent -->
+      <path d="M40 124 L600 122" stroke="#e10600" stroke-width="2.5" opacity=".85"/>
+      <path d="M150 140 L470 140" stroke="#2a2a2e" stroke-width="2"/>
+      <!-- wheels -->
+      <g><circle cx="140" cy="154" r="34" fill="#050505" stroke="#222" stroke-width="3"/><circle cx="140" cy="154" r="20" fill="#14070a" stroke="#e10600" stroke-width="2"/><circle cx="140" cy="154" r="5" fill="#e10600"/></g>
+      <g><circle cx="500" cy="154" r="34" fill="#050505" stroke="#222" stroke-width="3"/><circle cx="500" cy="154" r="20" fill="#14070a" stroke="#e10600" stroke-width="2"/><circle cx="500" cy="154" r="5" fill="#e10600"/></g>
+      <!-- headlight (front, left) + beam -->
+      <g class="beam"><path d="M24 128 L-260 90 L-260 190 Z" fill="url(#beamg)"/></g>
+      <g class="lamp"><ellipse cx="42" cy="124" rx="22" ry="8" fill="url(#lampg)"/><rect x="26" y="121" width="34" height="4" fill="#fff" opacity=".9"/></g>
+      <!-- taillight (rear, right) -->
+      <g class="lamp"><ellipse cx="610" cy="126" rx="24" ry="9" fill="url(#lampg)"/><rect x="584" y="123" width="38" height="4" fill="#ff2a2a"/></g>
+    </svg>
+    <div class="reflect" id="reflect"></div>
+  </div>
+  <div class="streaks"></div><div class="flash"></div>
+
+  <div class="bottom">
+    <div class="tools">
+      <button id="soundBtn" type="button" aria-pressed="false">Sound: Off</button>
+      <button id="skipBtn" type="button">Skip</button>
+    </div>
+    <div class="rowline"><span id="msg">STARTING ENGINE...</span><span id="pct">0%</span></div>
+    <div class="bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="bar"><div id="fill"></div></div>
+  </div>
+</div>
+
+<!-- MAIN PROFILE -->
+<div id="site">
+  <nav>
+    <a href="#home">Home</a><a href="#about">About</a><a href="#achievements">Achievements</a>
+    <a href="#education">Education</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#contact">Contact</a>
+  </nav>
+
+  <!-- =====================================================
+       EDIT YOUR INFO BELOW. Change only the text between tags.
+       ===================================================== -->
+
+  <!-- HOME -->
+  <header class="hero" id="home">
+    <h1>Alexa Faye G. Abad</h1>
+    <div class="tag display">Aspiring Network Designer</div>
+    <p>College IT student and beginner coder building projects one commit at a time.</p>
+    <div class="facts">
+      <span>Age 19</span>
+      <span>BS Information Technology, Nueva Vizcaya State University</span>
+    </div>
+  </header>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <h2>About</h2>
+    <p style="max-width:62ch;color:var(--muted)">I am a BS Information Technology student at Nueva Vizcaya State University. I am learning to code and I want to design and build reliable networks.</p>
+  </section>
+
+  <!-- ACHIEVEMENTS: copy a whole <div class="card">...</div> block to add another -->
+  <section id="achievements">
+    <h2>Achievements</h2>
+    <div class="grid">
+      <div class="card"><h3>NCII Passer</h3><p>National Certificate II holder, ICT batch 2023.</p></div>
+    </div>
+  </section>
+
+  <!-- EDUCATION TIMELINE: copy a whole <div class="tl">...</div> block to add another.
+       The text inside <div class="more"> shows when the school is clicked. -->
+  <section id="education">
+    <h2>Education Timeline</h2>
+    <div class="timeline">
+      <div class="tl">
+        <button type="button" aria-expanded="false"><div class="lvl">Elementary</div><div class="sch">Bayombong Central School SPED Center</div></button>
+        <div class="more">Add your academic achievements here.</div>
+      </div>
+      <div class="tl">
+        <button type="button" aria-expanded="false"><div class="lvl">Junior High</div><div class="sch">Saint Mary's University and Nueva Vizcaya General Comprehensive High School</div></button>
+        <div class="more">Add your academic achievements here.</div>
+      </div>
+      <div class="tl">
+        <button type="button" aria-expanded="false"><div class="lvl">Senior High</div><div class="sch">Nueva Vizcaya General Comprehensive High School</div></button>
+        <div class="more">Add your academic achievements here.</div>
+      </div>
+      <div class="tl">
+        <button type="button" aria-expanded="false"><div class="lvl">College</div><div class="sch">Nueva Vizcaya State University</div></button>
+        <div class="more">BS Information Technology.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="grid">
+      <div class="card"><h3>Networking</h3><p>Add your networking skills.</p></div>
+      <div class="card"><h3>Web Basics</h3><p>HTML, CSS, JavaScript.</p></div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="grid">
+      <div class="card"><h3>Programmer Portfolio</h3><p>This F1-themed profile website.</p></div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <div class="grid">
+      <div class="card"><h3>Email</h3><p>your-email@example.com</p></div>
+      <div class="card"><h3>Location</h3><p>Nueva Vizcaya, Philippines</p></div>
+    </div>
+  </section>
+
+  <footer>
+    <div>&copy; 2026 Alexa Faye G. Abad</div>
+    <button class="chip" id="replayBtn" type="button">Replay intro</button>
+  </footer>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
